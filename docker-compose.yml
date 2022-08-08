@@ -10,6 +10,9 @@ services:
       - 8000:8000
     depends_on:
       - db
+    environment:
+      - "DJANGO_SECRET_KEY=django-insecure-9qjpxz+8d5owpi5q*1w06(0ixv6*1@r$$(dky*ob*+r9r##(@tl"
+      - "DJANGO_DEBUG=True"
   db:
     image: postgres:13
     volumes:
